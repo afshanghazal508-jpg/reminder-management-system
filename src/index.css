@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cccbcb;
+    border: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #afaeae;
+  }
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px black;
+}
+
+.btn-blue {
+  @apply w-full bg-sky-500 active:bg-sky-400 hover:bg-sky-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-blue-loading {
+  @apply w-full bg-blue-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-red {
+  @apply w-full bg-red-500 active:bg-red-400 hover:bg-red-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-red-loading {
+  @apply w-full bg-red-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-green {
+  @apply w-full bg-green-500 active:bg-green-400 hover:bg-green-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-green-loading {
+  @apply w-full bg-green-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-yellow {
+  @apply w-full bg-yellow-500 active:bg-yellow-400 hover:bg-yellow-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-yellow-loading {
+  @apply w-full bg-yellow-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-purple {
+  @apply w-full bg-purple-500 active:bg-purple-400 hover:bg-purple-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-purple-loading {
+  @apply w-full bg-purple-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-orange {
+  @apply w-full bg-orange-500 active:bg-orange-400 hover:bg-orange-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-orange-loading {
+  @apply w-full bg-orange-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-cyan {
+  @apply w-full bg-cyan-500 active:bg-cyan-400 hover:bg-cyan-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-cyan-loading {
+  @apply w-full bg-cyan-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-pink {
+  @apply w-full bg-pink-500 active:bg-pink-400 hover:bg-pink-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-pink-loading {
+  @apply w-full bg-pink-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-teal {
+  @apply w-full bg-teal-500 active:bg-teal-400 hover:bg-teal-600 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-teal-loading {
+  @apply w-full bg-teal-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl text-white font-medium;
+}
+
+.btn-default {
+  @apply w-full bg-gray-300 active:bg-gray-400 hover:bg-gray-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-pointer rounded-md shadow-lg border-2 border-transparent hover:shadow-xl font-medium;
+}
+
+.btn-default-loading {
+  @apply w-full bg-gray-200 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-default rounded-md shadow-lg border-2 border-transparent hover:shadow-xl font-medium;
+}
+
+.btn-disabled {
+  @apply w-full bg-gray-400 flex items-center justify-center gap-2 me-2 px-3 py-1 cursor-not-allowed rounded-md shadow-lg border-2 border-transparent text-white font-medium;
+}
+
+.tab-normal {
+  @apply inline-flex items-center justify-center px-2 py-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300
+}
+
+.tab-active {
+  @apply inline-flex items-center justify-center px-2 py-2 text-blue-600 border-b-2 border-blue-600 rounded-t-lg
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: all 0.4s ease;
+}
