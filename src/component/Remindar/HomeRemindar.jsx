@@ -160,7 +160,7 @@ export default function Home() {
           transition={{
             delay: 1.1,
           }}
-          className="mt-6 sm:mt-10 mx-auto w-full max-w-md sm:max-w-xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-6"
+          className="mt-6 sm:mt-5 mx-auto w-full max-w-md sm:max-w-xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-6"
         >
           <p className="text-zinc-300 text-sm sm:text-base">
             ✨ Smart Notifications • ⚡ Fast Tracking • 🔒 Secure Management
@@ -174,7 +174,7 @@ export default function Home() {
           transition={{
             delay: 1.4,
           }}
-          className="mt-10"
+          className="mt-5"
         >
           <motion.button
             whileHover={{

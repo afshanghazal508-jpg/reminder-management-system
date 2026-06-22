@@ -3,7 +3,7 @@ import useRemindar from '../../crud/remindarCrud'
 import { useNetwork } from '../../common/useNetwork'
 import moment from 'moment'
 import { useToast } from '../../toast/ToastProvider'
-import { MdDelete, MdErrorOutline } from 'react-icons/md'
+import { MdDelete, MdErrorOutline, MdWork } from 'react-icons/md'
 import Container from '../../base/Container'
 import Card from '../../base/Card'
 import { FcHighPriority } from 'react-icons/fc'
@@ -20,6 +20,8 @@ import { useParams } from 'react-router-dom'
 import { ERemindarStatusBg, ERemindarStatusGetName, ERemindarStatusText } from '../../enum/ERemindarStatus'
 import { ERemindarCategoryBg, ERemindarCategoryGetName, ERemindarCategoryText } from '../../enum/ERemindarCategory'
 import { TbCategoryFilled } from 'react-icons/tb'
+import { FaHeartbeat, FaShoppingCart, FaUser, FaUsers } from 'react-icons/fa'
+import { PiStudentFill } from 'react-icons/pi'
 const NEXT_MONTH = new Date();
 NEXT_MONTH.setMonth(NEXT_MONTH.getMonth() - 1);
 export default function GetByCategory() {
@@ -42,6 +44,30 @@ export default function GetByCategory() {
         start: moment(NEXT_MONTH).format("YYYY-MM-DD"),
         end: moment(new Date()).format("YYYY-MM-DD")
     })
+    const getCategoryIcon = (category) => {
+        switch (category?.toLowerCase()) {
+            case "work":
+                return <MdWork className="text-blue-400 w-6 h-6" />;
+
+            case "personal":
+                return <FaUser className="text-pink-400 w-6 h-6" />;
+
+            case "study":
+                return <PiStudentFill className="text-yellow-400 w-6 h-6" />;
+
+            case "health":
+                return <FaHeartbeat className="text-red-400 w-6 h-6" />;
+
+            case "shopping":
+                return <FaShoppingCart className="text-purple-400 w-6 h-6" />;
+
+            case "meeting":
+                return <FaUsers className="text-cyan-400 w-6 h-6" />;
+
+            default:
+                return <MdWork className="text-blue-400 w-6 h-6" />;
+        }
+    };
     const toast = useToast()
     useEffect(() => {
         setSearch(pre => ({ ...pre, searchTerm: searchTerm }))
@@ -67,6 +93,7 @@ export default function GetByCategory() {
     //             setIsLoading(false)
     //         })
     // };
+
     const getData = async () => {
         setIsLoading(true);
 
@@ -96,7 +123,7 @@ export default function GetByCategory() {
                     <div className="flex items-center gap-4 bg-[#111827]/70 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-3 shadow-lg">
 
                         <div className="w-11 h-11 rounded-full bg-sky-500/20 flex items-center justify-center shadow-inner shadow-sky-500/20">
-                            <FcHighPriority className="text-sky-400 w-6 h-6" />
+                            {getCategoryIcon(category)}
                         </div>
 
                         <div>
